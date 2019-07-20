@@ -8,5 +8,8 @@ public class MarksCalculationService {
         }
         return amount_estimates/studentGrades.length;
     }
+    public double GradePointAverage (Group group){
+        group.getStudents()
+    }
 
 }
