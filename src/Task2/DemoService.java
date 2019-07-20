@@ -22,7 +22,18 @@ public class DemoService {
         Student student4 = new Student("Pipcin E.G.",4, MarksFourthStudent);
         Student student5 = new Student("Nutov W.Z.",5, MarksFifthStudent);
 
-        Group group = new Group()
+        Student [] students = new Student[]{student1,student2,student3,student4,student5};
+
+        Group group = new Group("Groups - Оболтусы",students);
+
+        IMarksCalculationService iMarksCalculationService = new MarksCalculationService();
+
+        System.out.println("Средняя оценка группы "+ group.getName());
+        System.out.println(iMarksCalculationService.GradePointAverage(group));
+        System.out.println("Количество студентов средняя оценка которых удовлетворительно и ниже");
+        System.out.println(iMarksCalculationService.numberLoserStudents(group));
+        System.out.println("Количество студентов со средней оценкой отлично");
+        System.out.println(iMarksCalculationService.numberExcellentStudents(group));
 
     }
 }
