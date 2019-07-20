@@ -10,5 +10,4 @@ public class StudentProgress {
     public int[] getStudentGrades() {
         return studentGrades;
     }
-
 }
